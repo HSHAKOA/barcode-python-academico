@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/banner_academico.gif" alt="Sistema Barcode Acadêmico V4 — Leitura Code 128 e SQLite WAL" width="900">
+
 # Barcode Python Acadêmico (V4)
 
 **Sistema modular em Python + SQLite (WAL) para apontamento de produção e controle de estoque por leitura de código de barras Code 128 — edição acadêmica independente.**
@@ -7,13 +9,13 @@
 <p>
   <a href="https://github.com/HSHAKOA/barcode-python-academico/actions/workflows/tests.yml"><img src="https://github.com/HSHAKOA/barcode-python-academico/actions/workflows/tests.yml/badge.svg" alt="Testes Automatizados V4"></a>
   <a href="certificacao/CERTIFICADO_VALIDACAO.md"><img src="https://img.shields.io/badge/Certificado%20T%C3%A9cnico-V4.0%20Validado-16A34A" alt="Certificado Técnico V4.0"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/Contribui%C3%A7%C3%B5es-Guia%20Aberto-0EA5E9" alt="Contribuições"></a>
   <img src="https://img.shields.io/badge/Python-3.12%20%7C%203.15-0F3460?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Testes-20%2F20%20OK-2563EB" alt="20/20 Testes">
-  <img src="https://img.shields.io/badge/SQLite-WAL%20%2B%20BEGIN%20IMMEDIATE-0F3460" alt="SQLite WAL">
   <img src="https://img.shields.io/badge/Dados-Receitas%20Fict%C3%ADcias-D97706" alt="Dados Fictícios">
 </p>
 
-[Demonstração](#-demonstração-do-fluxo) • [Capturas de Tela](#-capturas-reais-do-sistema) • [Instalação](#-instalação-e-execução) • [Documentação](docs/README.md) • [Certificado Técnico](certificacao/CERTIFICADO_VALIDACAO.md)
+[Demonstração](#-demonstração-do-fluxo) • [Capturas de Tela](#-capturas-reais-do-sistema) • [Instalação](#-instalação-e-execução) • [Documentação](docs/README.md) • [Contribuição](#-contribuição) • [Certificado Técnico](certificacao/CERTIFICADO_VALIDACAO.md)
 
 </div>
 
@@ -64,7 +66,8 @@ No processo de extrusão modelado, cada bipagem de etiqueta no formato `{MAQUINA
 barcode-python-academico/
 ├── .github/workflows/
 │   └── tests.yml                       # CI automatizado (20/20 completo + modo stdlib)
-├── assets/                             # GIF e capturas reais exibidas neste README
+├── assets/                             # GIFs animados e capturas reais exibidas no README
+│   ├── banner_academico.gif
 │   ├── demo_fluxo_academico.gif
 │   ├── tela_01_producao.png ... tela_04_resumo.png
 │   └── etiqueta_M2_p1.png
@@ -91,6 +94,7 @@ barcode-python-academico/
 ├── tests/
 │   └── test_barcode_regressao.py       # 20 testes automatizados isolados (unittest)
 ├── .gitignore                          # Bloqueia .db*, .env*, .venv/, logs e saídas geradas
+├── CONTRIBUTING.md                     # Diretrizes de contribuição acadêmica e Pull Requests
 ├── README.md                           # Visão geral do projeto
 └── SECURITY.md                         # Política de sanitização e controles locais
 ```
@@ -145,8 +149,18 @@ python -B -m unittest discover -s tests -v
 | :--- | :--- | :--- |
 | **Documentação Técnica** | Arquitetura, algoritmos Python, bibliotecas, instalação e testes | [`docs/README.md`](docs/README.md) |
 | **Certificado de Validação** | Atestado técnico V4.0, logs de execução, CI e *checksums* SHA-256 *(em área separada)* | [`certificacao/CERTIFICADO_VALIDACAO.md`](certificacao/CERTIFICADO_VALIDACAO.md) |
+| **Guia de Contribuição** | Padrões PEP 8, regras de dados fictícios e checklist para *Pull Requests* | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 | **Segurança e Sigilo** | Critérios de sanitização, proteção SQLite e bind local da API | [`SECURITY.md`](SECURITY.md) |
 | **Versão Empacotada** | Pacote ZIP oficial correspondente à tag `v4.0-academico` | [Releases](https://github.com/HSHAKOA/barcode-python-academico/releases) |
+
+---
+
+## 🤝 Contribuição
+
+Contribuições educacionais, correções de documentação e melhorias na cobertura de testes são muito bem-vindas! Antes de abrir um *Pull Request*:
+
+1. Siga as instruções e regras de sanitização descritas em [`CONTRIBUTING.md`](CONTRIBUTING.md) (nunca envie receitas reais de fábrica, arquivos `.db` ou credenciais).
+2. Execute `python -B -m unittest discover -s tests -v` e garanta aprovação integral antes do *push*.
 
 ---
 
