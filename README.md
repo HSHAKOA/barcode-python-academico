@@ -1,6 +1,52 @@
 # Barcode Python Acadêmico (V4)
 
+[![Testes Automatizados V4](https://github.com/HSHAKOA/barcode-python-academico/actions/workflows/tests.yml/badge.svg)](https://github.com/HSHAKOA/barcode-python-academico/actions/workflows/tests.yml)
+![Python](https://img.shields.io/badge/Python-3.12%20%7C%203.15-0F3460?logo=python&logoColor=white)
+![Testes](https://img.shields.io/badge/Testes%20(.venv)-20%2F20%20OK-16A34A)
+![Stdlib](https://img.shields.io/badge/Stdlib%20Mode-16%20OK%20%7C%204%20skipped-2563EB)
+![SQLite WAL](https://img.shields.io/badge/SQLite-WAL%20%2B%20BEGIN%20IMMEDIATE-0F3460)
+![Dados](https://img.shields.io/badge/Receitas-Fict%C3%ADcias%20Demonstrativas-D97706)
+
 Cópia acadêmica independente em Python para apontamento de produção e controle de estoque por código de barras, estruturada para consulta e avaliação na disciplina **Algoritmos e Linguagem de Programação — Python**.
+
+---
+
+## Demonstração Animada do Fluxo Completo (Dados Fictícios)
+
+<p align="center">
+  <img src="assets/demo_fluxo_academico.gif" alt="Demonstração animada do fluxo V4: etiqueta Code 128, leitura, estoque, histórico e resumo" width="900">
+</p>
+
+---
+
+## Capturas Reais do Sistema em Execução
+
+Todas as telas e etiquetas abaixo foram capturadas a partir de execução real isolada com receitas **estritamente fictícias** (`20,0 kg` base, `10,0 kg` de moído e `0,5 kg` de pigmento; operador `Aluno Demo`; entrada `NF-Ficticia-001`):
+
+| Aba Produção (leitura `M3-MOI-CC`) | Aba Estoque (alerta saldo negativo) |
+| :---: | :---: |
+| ![Aba Produção](assets/tela_01_producao.png) | ![Aba Estoque](assets/tela_02_estoque.png) |
+
+| Aba Histórico (5 apontamentos + CSV) | Aba Resumo do Dia (`122 kg` consolidado) |
+| :---: | :---: |
+| ![Aba Histórico](assets/tela_03_historico.png) | ![Aba Resumo](assets/tela_04_resumo.png) |
+
+<details>
+<summary><b>Ver exemplo de etiqueta PDF Code 128 gerada via ReportLab (etiqueta_M2_p1.png)</b></summary>
+<p align="center">
+  <img src="assets/etiqueta_M2_p1.png" alt="Etiquetas Code 128 fictícias da Máquina 2 geradas pelo ReportLab" width="420">
+</p>
+</details>
+
+---
+
+## Certificado Técnico de Validação e Auditoria Acadêmica
+
+<p align="center">
+  <img src="assets/certificado_validacao_v4.png" alt="Certificado Técnico de Validação e Auditoria Acadêmica V4.0" width="900">
+</p>
+
+- **Execução contínua (CI):** [`.github/workflows/tests.yml`](.github/workflows/tests.yml) executa automaticamente em `windows-latest` tanto a suíte completa (`20/20` com `requirements.txt`) quanto o modo somente biblioteca padrão (`16 OK, 4 skipped`).
 
 ---
 
@@ -41,8 +87,19 @@ A aplicação resolve esse fluxo com etiquetas Code 128 no formato `{MAQUINA}-{R
 
 ```text
 barcode-python-academico/
+├── .github/
+│   └── workflows/
+│       └── tests.yml               # CI Windows: suíte completa (20/20) + modo stdlib
 ├── .gitignore
 ├── README.md
+├── assets/
+│   ├── demo_fluxo_academico.gif    # Animação do fluxo etiqueta -> leitura -> resumo
+│   ├── certificado_validacao_v4.png# Certificado técnico de validação V4.0
+│   ├── tela_01_producao.png        # Captura real da aba Produção (dados fictícios)
+│   ├── tela_02_estoque.png         # Captura real da aba Estoque
+│   ├── tela_03_historico.png       # Captura real da aba Histórico
+│   ├── tela_04_resumo.png          # Captura real da aba Resumo do Dia
+│   └── etiqueta_M2_p1.png          # Etiqueta PDF Code 128 renderizada (M2)
 ├── PACOTE_MAQUINA_NOVA/
 │   ├── config_receitas.py          # Catálogo fictício demonstrativo (máquinas, cores e receitas)
 │   ├── core_vtc.py                 # Decodificação, regras de estoque e persistência SQLite WAL
