@@ -1,0 +1,39 @@
+# Bancos de dados SQLite e WAL/SHM
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+
+# Ambientes virtuais Python
+.venv/
+venv/
+env/
+
+# Caches Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Saídas geradas em execução ou demonstração
+PACOTE_MAQUINA_NOVA/dados_powerquery/
+dados_powerquery/
+*.csv
+*.xlsx
+*.pdf
+*.zpl
+
+# IDEs e sistema operacional
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
